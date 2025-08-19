@@ -3,6 +3,7 @@ import 'package:intl/intl.dart' as intl;
 import 'app_localizations.dart';
 
 // ignore_for_file: type=lint
+// cSpell:disable
 
 /// The translations for Bengali Bangla (`bn`).
 class AppLocalizationsBn extends AppLocalizations {

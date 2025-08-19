@@ -11,14 +11,39 @@ A production-ready Flutter project template implementing Clean Architecture prin
 
 ```plaintext
 lib/
-├── core/                       # Core shared functionality
-├── features/                   # Feature modules
-│   └── feature_name/           # Individual feature
-│       ├── data/               # Data layer (repositories, sources)
-│       ├── domain/             # Domain layer (entities, use cases)
-│       └── presentation/       # UI layer (screens, providers)
-├── examples/                   # Example implementations
-└── main.dart                   # Application entry point
+├── main.dart                     # Application entry point
+├── core/                         # Core functionality
+│   ├── accessibility/            # Accessibility features
+│   ├── analytics/                # Analytics services
+│   ├── auth/                     # Authentication
+│   ├── error/                    # Error handling
+│   ├── feature_flags/            # Feature flags
+│   ├── images/                   # Image utilities
+│   ├── l10n/                     # Localization
+│   ├── network/                  # Network handling
+│   ├── storage/                  # Local storage & caching
+│   ├── theme/                    # Theming
+│   ├── ui/                       # Shared UI components
+│   ├── utils/                    # Utility functions and extensions
+│   └── updates/                  # App update handling
+├── examples/                     # Example implementations
+│   ├── cache_example.dart
+│   ├── language_selector.dart
+│   ├── localization_demo.dart
+│   ├── localization_assets_demo.dart
+│   └── theme_showcase.dart
+├── features/                     # Feature modules
+│   ├── feature_a/                # Example feature
+│   │   ├── data/                 # Data layer (repositories, data sources)
+│   │   ├── domain/               # Domain layer (entities, use cases)
+│   │   └── presentation/         # UI layer (screens, widgets, controllers)
+│   ├── auth/                     # Authentication feature
+│   ├── home/                     # Home screen feature
+│   ├── settings/                 # App settings feature
+│   └── ui_showcase/              # UI component showcase
+├── gen/                          # Generated code
+└── l10n/                         # Localization resources
+    └── arb/                      # ARB translation files for multiple languages
 ```
 
 [Full Architecture Overview](docs/ARCHITECTURE.md)
@@ -750,19 +775,6 @@ class _EditProfileScreenState extends ConsumerState<EditProfileScreen> {
 ```
 
 </details>
-
-## 🛠️ Development Tools
-
-The template includes powerful command-line tools to streamline your development workflow:
-
-|                                                                                                                             |                                                                                                                                        |                                                                                                                                     |
-| :-------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------: |
-|    ![App Renamer](https://img.shields.io/badge/-%F0%9F%93%B1%20App%20Renamer-6366f1?style=for-the-badge&logoColor=white)    |     ![Feature Generator](https://img.shields.io/badge/-%E2%9A%A1%20Feature%20Generator-f43f5e?style=for-the-badge&logoColor=white)     | ![Language Generator](https://img.shields.io/badge/-%F0%9F%8C%90%20Language%20Generator-22c55e?style=for-the-badge&logoColor=white) |
-|                                    Update app name and package IDs across all platforms                                     |                                             Scaffold new features with clean architecture                                              |                                                     Add and manage translations                                                     |
-| ![Test Generator](https://img.shields.io/badge/-%F0%9F%A7%AA%20Test%20Generator-d946ef?style=for-the-badge&logoColor=white) | ![Feature Creator](https://img.shields.io/badge/-%F0%9F%9B%A0%EF%B8%8F%20Feature%20Creator-ec4899?style=for-the-badge&logoColor=white) |        ![CI/CD Tools](https://img.shields.io/badge/-%F0%9F%94%84%20CI/CD%20Tools-0ea5e9?style=for-the-badge&logoColor=white)        |
-|                                             Create test scaffolds for features                                              |                                               Create new features with boilerplate code                                                |                                                    Automate build and deployment                                                    |
-
-[Complete Development Tools Documentation](https://ssoad.github.io/flutter_riverpod_clean_architecture/tools.html)
 
 ### Feature Generator
 

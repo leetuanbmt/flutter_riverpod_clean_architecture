@@ -13,7 +13,7 @@ class AppConstants {
   static const String packageName =
       'com.example.flutter_riverpod_clean_architecture';
   static const String iOSAppId = '123456789';
-  static const String appcastUrl = 'https://your-appcast-url.com/appcast.xml';
+  static const String appCastUrl = 'https://your-appcast-url.com/appcast.xml';
 
   // Hive box names
   static const String settingsBox = 'settings';
